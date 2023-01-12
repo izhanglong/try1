@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>百叶窗</title>
+        <style>
+             body{
+    background:url("背景3.jpg") ;
+             }
+            *{
+                padding:0;
+                margin:0;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100hv;
+                background-color: rab(243,230,241);
+            }
+            .header{
+                text-align: center;
+                font-size: 50px;
+                font-family:方正舒体;
+                color:orangered ;
+            }
+            .shell{
+                width:90%;
+                height:700px;
+                display: flex;
+                position:absolute;
+                top:130px;
+                color: purple;
+                
+            }
+            .box{
+                flex: 1;
+                overflow: hidden;
+                transition: .5s;
+                margin: 0 20px;
+                box-shadow: 10px 10px 20px rab(0,0,0,.5);
+                border-radius: 20px;
+                border:10px solid #fff;
+                background-color: #fff;
+            }
+            .box>img{
+                width:200%;
+                height:85%;
+                object-fit: cover;
+                transition:.5s;
+            }
+            .box>span{
+                font:200 20px '优设标题黑';
+                text-align: center;
+                height:15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box:hover{
+                flex-basis: 40%;
+            }
+            .box:hover>img{
+                width:100%;
+                height:100%;
+            }
+            .start{
+	font-size:25px;
+	color:#FFF;
+	background:linear-gradient(
+	to right bottom,
+	rgba(255,255,255,0.6),
+	rgba(255,255,255,0.1)
+	);
+	background-color:#497271;
+	border-radius:10px;
+	height:20px;
+	line-height:20px;
+	width:55px;
+	text-align:center;
+	margin:0 auto;
+	padding:20px;
+	box-shadow:rgba(0,0,0,0.5) 3px 3px 4px;
+	position:absolute;
+    top: 750px;
+    left:45%;
+    
+
+}
+.start a{
+	text-decoration:none;
+	color:#FFF;
+}
+.mask{
+	position:absolute;
+	display:block;
+	height:0;
+	background-color:#FFF;
+	opacity:1;
+	width:0;
+	left:50%;
+	top:50%;
+	border-radius:50%;
+}
+.start:hover .mask{
+	animation-name:animation;
+	animation-duration:1s;
+}
+@Keyframes animation{
+	from{
+		width:1px;
+		height:1px;
+		transform:scale(0);
+		opacity:1;
+	}
+	to{
+		width:1px;
+		height:1px;
+		transform:scale(100);
+		opacity:0;
+	}
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+        <p>总要去一趟上海吧</p>
+        <p>去与魔都夏日撞个满怀</p>
+        </div>
+        
+        <div class="shell">
+            <div class="box">
+            <img src="上海外滩.jpg">
+            <span>上海外滩</span>
+            </div>
+            <div class="box">
+                <img src="海关大楼.jpg">
+                <span>海关大楼大钟</span>
+            </div>
+            <div class="box">
+                <img src="3.jpg">
+                <span>南京路步行街</span>
+            </div>
+            <div class="box">
+                <img src="城隍庙.jpg">
+                <span>城隍庙</span>
+            </div>
+            <div class="start">
+                <a href="主页面.html">start<span class="mask"></span></a>
+                </div>
+                
+            
+    </body>
+</html>
